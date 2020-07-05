@@ -23,7 +23,7 @@ class ArticleController extends Controller
     }
 
     public function edit($id){
-        $data = ArticleModel::getById($id);
+        $data = ArticleModel::getByIdEdit($id);
         // return $data;
         return view('article.edit',['articles' => $data]);
     }

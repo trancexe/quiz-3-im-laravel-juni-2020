@@ -29,6 +29,11 @@ class ArticleModel extends Model
         return response()->json($save);
     }   
 
+    public static function getByIdEdit($id){
+        $data = DB::table('articles')->where('id','=',$id)->get();
+        return $data;
+    }
+
     public static function getById($id){
         $data = DB::table('articles')->find($id);
         $data->tag = explode(',' , $data->tag);

@@ -44,6 +44,13 @@
                           </a>
                         </button>
                       </p>
+                      <p class='float-right'>
+                        <button type="sumbit" class="btn float-right shadow-none" value="Trash">
+                          <a class="" href="{{route('article.index')}}">
+                            <i class="fas fa-arrow-left"></i>
+                          </a>
+                        </button>
+                      </p>
             </div>
         </div>
         <div>
