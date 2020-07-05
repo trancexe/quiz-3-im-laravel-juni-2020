@@ -32,9 +32,8 @@ class ArticleController extends Controller
         $articles = ArticleModel::getById($id);
         // $nam = explode(', ', $articles[0]->tag);
         // $articles['baru'] = 'value baru';
-        $articles['n_tag'] = explode(', ', $articles[0]->tag);
-        // return view('article.show', ['articles' => $articles]);
-        return dd($articles);
+        return view('article.show', ['articles' => $articles]);
+        // return dd($articles);
     }
 
     public function update(request $request, $id){

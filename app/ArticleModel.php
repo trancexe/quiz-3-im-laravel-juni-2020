@@ -30,8 +30,8 @@ class ArticleModel extends Model
     }   
 
     public static function getById($id){
-        $data = DB::table('articles')->where('id','=',$id)->get();
-
+        $data = DB::table('articles')->find($id);
+        $data->tag = explode(',' , $data->tag);
         return $data;
     }
 
